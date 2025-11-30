@@ -1,0 +1,351 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+/* ------------------------------------------ */
+/*                 BANNER                     */
+/* ------------------------------------------ */
+
+.banner {
+  background-image: url('../images/gda_old_town_banner.JPG');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 250px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.banner h1 {
+  background: rgba(255, 255, 255, 0.35);
+  padding: 18px 30px;
+  color: #002f3a;
+  border-radius: 12px;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  backdrop-filter: blur(1px);
+}
+
+/* ------------------------------------------ */
+/*               NAVIGATION BAR               */
+/* ------------------------------------------ */
+
+.navbar {
+	position:-webkit-sticky;/*safari*/
+	position:sticky;
+	top:0px;/*set to stisk at the top of the viewport*/
+  background-color: #add8e6;
+  padding: 10px 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;      /* MOBILE FIRST: vertical */
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-item a {
+  display: block;
+  padding: 10px 18px;
+  background-color:#c0f2e9 ;
+  border-radius: 6px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #002f3a;
+  transition: 0.3s;
+}
+
+.menu-item a:hover {
+  background-color:#002f3a;
+  color: white;
+}
+
+/* ------------------------------------------ */
+/*               ABOUT SECTION                */
+/* ------------------------------------------ */
+
+.about {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,255,0.95));
+  padding: 30px 20px;
+}
+
+.about-title {
+  font-family: "Georgia", serif;
+  font-size: 22px;
+  color: #0b2340;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.about-body {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: #344e63;
+}
+/* ------------------------------------------ */
+/*               FOOTER SECTION               */
+/* ------------------------------------------ */
+.footer {
+  background: #0b2340;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer a {
+  color: #9fc5ff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.footer-links li {
+  font-size: 18px;
+}
+
+.footer-content h3 {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  opacity: 0.7;
+  font-size: 14px;
+}
+/* ------------------------------------------ */
+/*           CONTACT SECTION                  */
+/* ------------------------------------------ */
+.contact-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0b2340;
+}
+
+.contact-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #344e63;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #0077cc;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #005fa3;
+}
+
+/* ------------------------------------------ */
+/*           IMAGE GALLERY (MOBILE )           */
+/* ------------------------------------------ */
+
+.image-gallery  {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+
+.image-gallery  img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:active {
+  transform: scale(1.8);
+  z-index: 10;
+}
+
+/* ===================================================== */
+/*                     TABLET VIEW                       */
+/* ===================================================== */
+
+@media (min-width: 520px) {
+  .about-title { font-size: 26px; }
+
+  .menu-item a {
+    font-size: 22px;
+  }
+}
+
+/* ===================================================== */
+/*                    SMALL LAPTOP                       */
+/* ===================================================== */
+
+@media (min-width: 768px) {
+
+  .banner {
+    height: 350px;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .menu {
+    flex-direction: row;     /* horizontal menu */
+    gap: 20px;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===================================================== */
+/*                    FULL DESKTOP                       */
+/* ===================================================== */
+
+@media (min-width: 1024px) {
+
+  .banner {
+    height: 500px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+
+  .banner h1 {
+    font-size: 48px;
+    padding: 20px 40px;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* ------------------------------------------ */
+/*          CONTACT US SECTION (MOBILE)       */
+/* ------------------------------------------ */
+
+@media (max-width: 520px) {
+    .contact-section {
+        padding: 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 26px;
+    }
+
+    .contact-text {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .contact-button {
+        font-size: 18px;
+        width: 100%;
+        padding: 14px;
+    }
+}
+/* ------------------------------------------ */
+/*         Video-gallery mobile ver.          */
+/* ------------------------------------------ */
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.video-gallery h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #0b2340;
+}
+
+/* Стили для самого видео */
+.video-gallery video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;        /* как фото */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Увеличение при тапе – как на фото */
+.video-gallery video:active {
+    transform: scale(1.05);
+    z-index: 10;
+}
+/* ------------------------------------------ */
+/*         Video-gallery other devices        */
+/* ------------------------------------------ */
+@media (min-width: 480px) {
+    .video-gallery h2 {
+        font-size: 22px;
+    }
+}
+@media (min-width: 768px) {
+    .video-gallery {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .video-gallery h2 {
+        font-size: 26px;
+    }
+
+    .video-gallery video {
+        max-width: 800px;
+        aspect-ratio: 16 / 9;  /* На больших экранах красивее смотрится */
+    }
+}
